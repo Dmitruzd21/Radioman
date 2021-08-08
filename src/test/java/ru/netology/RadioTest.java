@@ -47,7 +47,7 @@ class RadioTest {
     public void shouldsetincreaseSoundVolume1pIfCurrentIs10() {
         Radio radio = new Radio();
         radio.setincreaseSoundVolume1p(radio.getMaxSoundVolume());
-        int expected = radio.getMinSoundVolume();
+        int expected = radio.getMaxSoundVolume();
         int actual = radio.getCurrantSoundVolume();
         assertEquals(expected, actual);
     }

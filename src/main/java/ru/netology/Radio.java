@@ -7,9 +7,10 @@ public class Radio {
     private int currantRadioStation;
 
 
+
     private int minSoundVolume = 0;
     private int maxSoundVolume = 10;
-    private int currantSoundVolume;
+    private int currantSoundVolume = 3;
 
     public int getCurrantRadioStation() {
         return currantRadioStation;
@@ -105,7 +106,7 @@ public class Radio {
             this.currantSoundVolume = currantSoundVolume + 1;
         }
         if (currantSoundVolume == maxSoundVolume) {
-            return;
+            this.currantSoundVolume = currantSoundVolume;
         }
     }
 
@@ -114,7 +115,8 @@ public class Radio {
             this.currantSoundVolume = currantSoundVolume - 1;
         }
         if (currantSoundVolume == minSoundVolume) {
-            return;
+            this.currantSoundVolume = currantSoundVolume;
         }
+
     }
 }
