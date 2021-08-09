@@ -6,6 +6,26 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class RadioTest {
 
+    //Тестирование радиостанций
+
+    @Test
+    public void shouldNotSetSrationOverMax() {
+        Radio radio = new Radio();
+        int expected = radio.getCurrantRadioStation();
+        radio.setCurrantRadioStation(10);
+        int actual = radio.getCurrantRadioStation();
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void shouldNotSetSrationUnderMax() {
+        Radio radio = new Radio();
+        int expected = radio.getCurrantRadioStation();
+        radio.setCurrantRadioStation(-1);
+        int actual = radio.getCurrantRadioStation();
+        assertEquals(expected, actual);
+    }
+
     @Test
     public void shouldsetNextStationIfStationIs9() {
         Radio radio = new Radio();
@@ -46,11 +66,31 @@ class RadioTest {
         assertEquals(expected, actual);
     }
 
+// Тестирование уровня громкости
+
+    @Test
+    public void shouldNotSetSoundVolumeOverMax() {
+        Radio radio = new Radio();
+        int expected = radio.getCurrantSoundVolume();
+        radio.setCurrantSoundVolume(11);
+        int actual = radio.getCurrantSoundVolume();
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void shouldNotSetSoundVolumeUnderMax() {
+        Radio radio = new Radio();
+        int expected = radio.getCurrantSoundVolume();
+        radio.setCurrantSoundVolume(-1);
+        int actual = radio.getCurrantSoundVolume();
+        assertEquals(expected, actual);
+    }
+
     @Test
     public void shouldsetincreaseSoundVolume1pIfCurrentIs10() {
         Radio radio = new Radio();
         radio.setCurrantSoundVolume(radio.getMaxSoundVolume());
-        radio.setincreaseSoundVolume1p ();
+        radio.setincreaseSoundVolume1p();
         int expected = radio.getMaxSoundVolume();
         int actual = radio.getCurrantSoundVolume();
         assertEquals(expected, actual);

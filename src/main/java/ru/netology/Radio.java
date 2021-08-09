@@ -40,6 +40,12 @@ public class Radio {
 
 
     public void setCurrantRadioStation(int currantRadioStation) {
+        if (currantRadioStation < minStation){
+            return;
+        }
+        if (currantRadioStation > maxStation){
+            return;
+        }
         this.currantRadioStation = currantRadioStation;
     }
 
@@ -66,6 +72,12 @@ public class Radio {
     //Работа с уровнем громкости звука
 
     public void setCurrantSoundVolume(int currantSoundVolume) {
+        if (currantSoundVolume < minSoundVolume){
+            return;
+        }
+        if (currantSoundVolume > maxSoundVolume){
+            return;
+        }
         this.currantSoundVolume = currantSoundVolume;
     }
 
