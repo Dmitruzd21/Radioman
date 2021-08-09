@@ -80,7 +80,7 @@ public class Radio {
 
 
     public void setNextStation(int currantRadioStation) {
-        if (currantRadioStation < 9) {
+        if (currantRadioStation < maxStation) {
             this.currantRadioStation = currantRadioStation + 1;
         }
         if (currantRadioStation == maxStation) {
@@ -91,7 +91,7 @@ public class Radio {
 
 
     public void setPrevStation(int currantRadioStation) {
-        if (currantRadioStation > 0) {
+        if (currantRadioStation > minStation) {
             this.currantRadioStation = currantRadioStation - 1;
         }
         if (currantRadioStation == minStation) {
@@ -102,7 +102,7 @@ public class Radio {
 
     //Работа с уровнем громкости звука
     public void setincreaseSoundVolume1p(int currantSoundVolume) {
-        if (currantSoundVolume < 10) {
+        if (currantSoundVolume < maxSoundVolume) {
             this.currantSoundVolume = currantSoundVolume + 1;
         }
         if (currantSoundVolume == maxSoundVolume) {
@@ -111,7 +111,7 @@ public class Radio {
     }
 
     public void setdecreaseSoundVolume1p(int currantSoundVolume) {
-        if (currantSoundVolume > 0) {
+        if (currantSoundVolume > minSoundVolume) {
             this.currantSoundVolume = currantSoundVolume - 1;
         }
         if (currantSoundVolume == minSoundVolume) {
