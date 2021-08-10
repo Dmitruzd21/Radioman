@@ -18,7 +18,7 @@ class RadioTest {
     }
 
     @Test
-    public void shouldNotSetSrationUnderMax() {
+    public void shouldNotSetStationUnderMax() {
         Radio radio = new Radio();
         int expected = radio.getCurrantRadioStation();
         radio.setCurrantRadioStation(-1);

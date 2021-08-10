@@ -40,10 +40,10 @@ public class Radio {
 
 
     public void setCurrantRadioStation(int currantRadioStation) {
-        if (currantRadioStation < minStation){
+        if (currantRadioStation < minStation) {
             return;
         }
-        if (currantRadioStation > maxStation){
+        if (currantRadioStation > maxStation) {
             return;
         }
         this.currantRadioStation = currantRadioStation;
@@ -53,17 +53,16 @@ public class Radio {
     public void setNextStation() {
         if (currantRadioStation < maxStation) {
             this.currantRadioStation = currantRadioStation + 1;
-        } else if (currantRadioStation == maxStation) {
+        } else {
             this.currantRadioStation = minStation;
         }
-
     }
 
 
     public void setPrevStation() {
         if (currantRadioStation > minStation) {
             this.currantRadioStation = currantRadioStation - 1;
-        } else if (currantRadioStation == minStation) {
+        } else {
             this.currantRadioStation = maxStation;
         }
     }
@@ -72,10 +71,10 @@ public class Radio {
     //Работа с уровнем громкости звука
 
     public void setCurrantSoundVolume(int currantSoundVolume) {
-        if (currantSoundVolume < minSoundVolume){
+        if (currantSoundVolume < minSoundVolume) {
             return;
         }
-        if (currantSoundVolume > maxSoundVolume){
+        if (currantSoundVolume > maxSoundVolume) {
             return;
         }
         this.currantSoundVolume = currantSoundVolume;
@@ -85,17 +84,18 @@ public class Radio {
     public void setincreaseSoundVolume1p() {
         if (currantSoundVolume < maxSoundVolume) {
             this.currantSoundVolume = currantSoundVolume + 1;
-        } else if (currantSoundVolume == maxSoundVolume) {
+        } else {
             this.currantSoundVolume = currantSoundVolume;
         }
     }
+
 
     public void setdecreaseSoundVolume1p() {
         if (currantSoundVolume > minSoundVolume) {
             this.currantSoundVolume = currantSoundVolume - 1;
-        } else if (currantSoundVolume == minSoundVolume) {
+        } else {
             this.currantSoundVolume = currantSoundVolume;
         }
-
     }
+
 }
