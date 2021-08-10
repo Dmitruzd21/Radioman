@@ -36,7 +36,7 @@ public class Radio {
     }
 
 
-    // Работа с радиостанциями
+    // Работа с радиостанциями.
 
 
     public void setCurrantRadioStation(int currantRadioStation) {
@@ -68,7 +68,7 @@ public class Radio {
     }
 
 
-    //Работа с уровнем громкости звука
+    //Работа с уровнем громкости звука.
 
     public void setCurrantSoundVolume(int currantSoundVolume) {
         if (currantSoundVolume < minSoundVolume) {
@@ -93,6 +93,8 @@ public class Radio {
     public void setdecreaseSoundVolume1p() {
         if (currantSoundVolume > minSoundVolume) {
             this.currantSoundVolume = currantSoundVolume - 1;
+
+
         } else {
             this.currantSoundVolume = currantSoundVolume;
         }
